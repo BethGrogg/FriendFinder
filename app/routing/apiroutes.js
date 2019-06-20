@@ -6,7 +6,7 @@ app.get("/api/friends", function(req, res) {
     res.json(tableData);
 });
 
- // app.post("/api/friends", function(req, res) {
+  app.post("/api/friends", function(req, res) {
     // req.body hosts is equal to the JSON post sent from the user
     // This works because of our body parsing middleware
  //   var newFriends = req.body;
@@ -18,8 +18,9 @@ app.get("/api/friends", function(req, res) {
  //   console.log(newFriends);
     
   
- //   tables.push(newFriends);
+    tableData.push(req.body);
   
 //    res.json(tableData);
  
+});
 };  
