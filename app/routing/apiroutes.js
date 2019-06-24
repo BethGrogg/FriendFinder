@@ -33,23 +33,68 @@ app.get("/api/friends", function(req, res) {
     var j = tableData.length - 1;
    
     var friendsArray = [];
+    var nameArray = [];
+
+    
    
     for (i = 0; i < (tableData.length - 1); i++) {
       var newAnswer = 0;
+      var name = "";
       for (k = 0; k < 10; k++) {
          
          console.log("currentUser: " + tableData[j].scores[k]);
          console.log("otherFriends: " + tableData[i].scores[k]);
         var answer = Math.abs(tableData[j].scores[k] - tableData[i].scores[k]);
         newAnswer += answer;
+        name = tableData[i].name;
+
         
       }
+      
       console.log("newAnswer: " + newAnswer);
+      console.log("name: " + name);
+      nameArray.push(name);
       friendsArray.push(newAnswer);
+      console.log('nameArray: ' + nameArray);
       console.log('friendsArray: ' + friendsArray);
+      Array.prototype.associate = function (keys) {
+         var result = {};
+       
+         this.forEach(function (el, i) {
+           result[keys[i]] = el;
+         });
+       
+         return result;
+       };
+       
+       var associateArray = nameArray.associate(friendsArray);
+       console.log(nameArray.associate(friendsArray));
+       console.log(Object.values(associateArray)[0]);
+
+       for (i = 0; i < tableData.length; i++) {
+console.log("hi: " + tableData[i].name);
+         if (tableData[i].name === Object.values(associateArray)[0]) {
+            console.log("in here");
+            console.log(tableData[i].photo);
+         }
+       }
     }
 
-    console.log("array sort: " + friendsArray.sort(function(a, b){return a - b}));
+    
+//     var firstArray = friendsArray;
+//     console.log("firstArray: " + firstArray);
+//     var newSort = firstArray.sort(function(a, b){return a - b});
+//  //   console.log("newSort: " + newSort);
+//     console.log("firstArray: " + firstArray);
+//     console.log('friendsArray: ' + friendsArray);
+//     for (i = 0; i < friendsArray.length; i++) {
+
+//       if (friendsArray[i] === newSort[0]) {
+//          console.log(i);
+//          console.log("name: " + nameArray[i]);
+//          console.log("score: " + friendsArray[i]);
+//       }
+//    }
     
 
     //    res.json(tableData);
