@@ -16,7 +16,7 @@ var friendsArray = [ {
     },
     {
     "name": "BethanyG",
-    "photo": "",
+    "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNGmwK3Qoi4CiBvfB7giQopJwd01K2QoGlIZ9eLSR2nElTXRoo",
     "scores": [
     "2",
     "2",
