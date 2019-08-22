@@ -4,6 +4,10 @@ This application is designed to match the user up with their most compatible fri
 
 This application utilizes html, javascript, jquery, bootstrap, express, and node.
 
+![FriendFinder1](/FriendFinder1.png)
+
+![FriendFinder2](/FriendFinder2.pngd)
+
 https://github.com/BethGrogg/FriendFinder
 
 This project was created by Bethany Grogg as a project for UNH Full Stack Bootcamp.
