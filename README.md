@@ -6,7 +6,7 @@ This application utilizes html, javascript, jquery, bootstrap, express, and node
 
 ![FriendFinder1](/FriendFinder1.png)
 
-![FriendFinder2](/FriendFinder2.pngd)
+![FriendFinder2](/FriendFinder2.png)
 
 https://github.com/BethGrogg/FriendFinder
 
